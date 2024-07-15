@@ -1,22 +1,18 @@
 # %%
 import glob
 import os
+from collections import Counter
+from itertools import chain
 
+import matplotlib.font_manager as fm
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from collections import Counter
-import matplotlib.font_manager as fm
-from matplotlib.cm import get_cmap
-from matplotlib import gridspec
-from scipy.stats import f_oneway
-from statsmodels.stats.multicomp import pairwise_tukeyhsd
 import seaborn as sns
-from itertools import chain
-import matplotlib.font_manager as fm
-import matplotlib.pyplot as plt
-import numpy as np
-from scipy.stats import sem, ttest_1samp
+from matplotlib import gridspec
+from matplotlib.cm import get_cmap
+from scipy.stats import f_oneway, sem, ttest_1samp
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
 from statsmodels.stats.multitest import fdrcorrection
 
 # %%
@@ -99,6 +95,7 @@ df_merge_all = pd.concat([df_merge_v1, df_merge_v2, df_merge_v3], axis=0
 list_crp_groups = df_merge_v1["CRP_Group"].to_list()
 dict_cnt = Counter(list_crp_groups)
 from scipy.stats import ttest_ind
+
 error_crp_groups = df_merge_v1.groupby("CRP_Group")["error"].apply(list)
 list_high_crp_error = error_crp_groups[0]
 list_low_crp_error = error_crp_groups[1]
@@ -106,7 +103,7 @@ list_low_crp_error = error_crp_groups[1]
 stat, pval = mannwhitneyu(list_high_crp_error, list_low_crp_error, alternative='greater')
 # %%
 cm = 1/2.54
-path = "/BiO/Access/kyungwhan1998/miniconda3/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/Arial.ttf"
+path = "./Arial.ttf"
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
 plt.rcParams["font.size"] = 5
@@ -274,19 +271,20 @@ plt.subplots_adjust(left=0.8)
 
 # Display the plot
 plt.tight_layout()
-plt.savefig("Figures/Fig_2.png", dpi=600, bbox_inches="tight")
-plt.savefig("Figures/Fig_2.pdf", dpi=600, bbox_inches="tight")
+plt.savefig("Figures/Fig_2.png", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Fig_2.pdf", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 
 import matplotlib.font_manager as fm
- # %% [Prediction Error]
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.ticker import MaxNLocator
 
+ # %% [Prediction Error]
+
 cm = 1/2.54
-path = "/BiO/Access/kyungwhan1998/miniconda3/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/Arial.ttf"
+path = "./Arial.ttf"
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
 plt.rcParams["font.size"] = 5
@@ -327,8 +325,8 @@ for j in range(num_cohorts, N * N):
     axs.flatten()[j].axis('off')
 
 # Adjust layout and show plot
-plt.savefig("Figures/Extended_Data_Fig_7.png", dpi=600, bbox_inches="tight")
-plt.savefig("Figures/Extended_Data_Fig_7.pdf", dpi=600, bbox_inches="tight")
+plt.savefig("Figures/Extended_Data_Fig_7.png", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Extended_Data_Fig_7.pdf", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -361,13 +359,14 @@ _, list_pval_corrected = fdrcorrection(list_pval)
 df_group_stats["padj"] = list_pval_corrected
 df_group_stats.to_csv("./Supplementary_Tables/Table_S4.txt", sep="\t", index=False)
 
+import math
+
 # %%
 from scipy.stats import pearsonr
 from statsmodels.stats.multitest import fdrcorrection
-import math
 
 cm = 1/2.54
-path = "/BiO/Access/kyungwhan1998/miniconda3/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/Arial.ttf"
+path = "./Arial.ttf"
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
 plt.rcParams["font.size"] = 10
@@ -428,14 +427,14 @@ for ax in axes[len(numerical_columns):]:
     ax.axis('off')
 
 plt.tight_layout()
-plt.savefig("./Figures/Extended_Data_Fig_9.pdf", dpi=600, bbox_inches="tight")
-plt.savefig("./Figures/Extended_Data_Fig_9.png", dpi=600, bbox_inches="tight")
+plt.savefig("./Figures/Extended_Data_Fig_9.pdf", dpi=300, bbox_inches="tight")
+plt.savefig("./Figures/Extended_Data_Fig_9.png", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 
 # %%
 # cm = 1/2.54
-# path = "/BiO/Access/kyungwhan1998/miniconda3/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/Arial.ttf"
+# path = "./Arial.ttf"
 # prop = fm.FontProperties(fname=path)
 # plt.rcParams['font.family'] = prop.get_name()
 # plt.rcParams["font.size"] = 5
@@ -531,8 +530,8 @@ plt.close()
 
 
 # plt.tight_layout()
-# plt.savefig("./Figures/Extended_Data_Fig_11.pdf", dpi=600, bbox_inches="tight")
-# plt.savefig("./Figures/Extended_Data_Fig_11.png", dpi=600, bbox_inches="tight")
+# plt.savefig("./Figures/Extended_Data_Fig_11.pdf", dpi=300, bbox_inches="tight")
+# plt.savefig("./Figures/Extended_Data_Fig_11.png", dpi=300, bbox_inches="tight")
 # plt.show()
 # plt.close()
 

@@ -25,7 +25,7 @@ data = data.rename(columns={"corr": "corr_Test"})
 # %%
 # Set font properties and figure size
 cm = 1/2.54
-path = "/BiO/Access/kyungwhan1998/miniconda3/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/Arial.ttf"
+path = "./Arial.ttf"
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
 plt.rcParams["font.size"] = 5
@@ -98,7 +98,7 @@ x = np.arange(len(label))
 # Plot stacked bar plot
 width = 0.2
 ax4.bar(x - width, abs(data_selec["corr_Train"]), width, label='Train', color="blue", edgecolor="black", linewidth=plot_linewidth)
-ax4.bar(x, abs(data_selec["corr_Valid"]), width, label='Valid', color="orange", edgecolor="black", linewidth=plot_linewidth)
+ax4.bar(x, abs(data_selec["corr_Valid"]), width, label='Validation', color="orange", edgecolor="black", linewidth=plot_linewidth)
 ax4.bar(x + width, abs(data_selec["corr_Test"]), width, label='Test', color="green", edgecolor="black", linewidth=plot_linewidth)
 
 ax4.legend(fontsize=plt.rcParams["font.size"], title="Dataset", title_fontsize=plt.rcParams["font.size"]+1)
@@ -116,7 +116,8 @@ fig.text(0.63, 0.95, 'c', ha='center', va='center', fontsize=plt.rcParams["font.
 fig.text(0.01, 0.50, 'd', ha='center', va='center', fontsize=plt.rcParams["font.size"]+2, weight='bold')
 
 fig.tight_layout()
-plt.savefig("./Figures/Extended_Data_Fig_3.pdf", dpi=600, bbox_inches="tight")
-plt.savefig("./Figures/Extended_Data_Fig_3.png", dpi=600, bbox_inches="tight")
+plt.savefig("./Figures/Extended_Data_Fig_3.pdf", dpi=300, bbox_inches="tight")
+plt.savefig("./Figures/Extended_Data_Fig_3.png", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
+# %%

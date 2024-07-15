@@ -9,6 +9,7 @@ import pandas as pd
 import seaborn as sns
 from matplotlib import gridspec
 from matplotlib.lines import Line2D
+
 from transcriptomic_clock import Clock
 
 # %%
@@ -26,7 +27,7 @@ dict_name_conversion = {"healthy_train": "Healthy Training Set (N=370)",
 
 # %% [draw_feature_importance_barplot]
 cm = 1/2.54
-path = "/BiO/Access/kyungwhan1998/miniconda3/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/Arial.ttf"
+path = "./Arial.ttf"
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
 plt.rcParams["font.size"] = 5
@@ -328,8 +329,8 @@ ax8.set_axis_off()
 # ax9.add_patch(rec)
 # ax9.set_axis_off()
 
-plt.savefig("Figures/Fig_1.pdf", dpi=600, bbox_inches="tight")
-plt.savefig("Figures/Fig_1.png", dpi=600, bbox_inches="tight")
+plt.savefig("Figures/Fig_1.pdf", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Fig_1.png", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -401,8 +402,8 @@ handles, labels = axs[0].get_legend_handles_labels()
 axs[-1].legend(handles, labels, loc='center', fontsize=plt.rcParams["font.size"]+1)
 
 # Adjust layout and show plot
-plt.savefig("Figures/Extended_Data_Fig_6.png", dpi=600)
-plt.savefig("Figures/Extended_Data_Fig_6.pdf", dpi=600)
+plt.savefig("Figures/Extended_Data_Fig_6.png", dpi=300)
+plt.savefig("Figures/Extended_Data_Fig_6.pdf", dpi=300)
 plt.show()
 plt.close()
 
@@ -618,6 +619,7 @@ ax1.text(-1.2, 1.02, "a", transform = ax1.transAxes, size = plt.rcParams["font.s
 # db2
 import textwrap
 
+
 # Define a function to wrap text
 def wrap_labels(labels, width):
     return ['\n'.join(textwrap.wrap(label, width)) for label in labels]
@@ -689,8 +691,8 @@ ax4.set_axis_off()
 # ax5.add_patch(rec)
 # ax5.set_axis_off()
 
-plt.savefig("Figures/Extended_Data_Fig_2.pdf", dpi=600, bbox_inches="tight")
-plt.savefig("Figures/Extended_Data_Fig_2.png", dpi=600, bbox_inches="tight")
+plt.savefig("Figures/Extended_Data_Fig_2.pdf", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Extended_Data_Fig_2.png", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 

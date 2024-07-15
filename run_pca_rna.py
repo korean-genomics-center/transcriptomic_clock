@@ -67,7 +67,7 @@ pca_obj, pca_exp = pca.run_pca(df_exp_train, df_exp_all, std=False)
 df_pca_meta = pca.merge_pcadata_and_metadata(pca_exp, df_meta_all)
 # %%
 cm = 1/2.54
-path = "/BiO/Access/kyungwhan1998/miniconda3/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/Arial.ttf"
+path = "./Arial.ttf"
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
 plt.rcParams["font.size"] = 5
@@ -84,8 +84,8 @@ fig, axes = pca.draw_pc_biplot(df_pca_meta,
                                plot_linewidth = plot_linewidth, 
                                figsize=figsize)
 fig.tight_layout(pad=0, h_pad=1.5, w_pad=1.5)    # Adjusted padding to minimize margins while preventing overlap
-plt.savefig("Figures/Extended_Data_Fig_4.pdf", dpi=600, bbox_inches='tight')
-plt.savefig("Figures/Extended_Data_Fig_4.png", dpi=600, bbox_inches='tight')
+plt.savefig("Figures/Extended_Data_Fig_4.pdf", dpi=300, bbox_inches='tight')
+plt.savefig("Figures/Extended_Data_Fig_4.png", dpi=300, bbox_inches='tight')
 plt.show()
 plt.close()
 

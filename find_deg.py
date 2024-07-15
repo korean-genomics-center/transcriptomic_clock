@@ -5,8 +5,8 @@ import os
 import string
 
 import matplotlib.font_manager as fm
-import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -15,7 +15,7 @@ from statsmodels.stats.multitest import fdrcorrection
 
 # Configuration
 cm = 1/2.54
-path = "/BiO/Access/kyungwhan1998/miniconda3/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/Arial.ttf"
+path = "./Arial.ttf"
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
 plt.rcParams["font.size"] = 5
@@ -276,8 +276,8 @@ ax4.text(-0.43, 1.0,
 ax4.spines[['right', 'top']].set_visible(False)
 
 plt.tight_layout()
-plt.savefig("./Figures/Extended_Data_Fig_8.pdf", dpi=600, bbox_inches="tight")
-plt.savefig("./Figures/Extended_Data_Fig_8.png", dpi=600, bbox_inches="tight")
+plt.savefig("./Figures/Extended_Data_Fig_8.pdf", dpi=300, bbox_inches="tight")
+plt.savefig("./Figures/Extended_Data_Fig_8.png", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 # %%

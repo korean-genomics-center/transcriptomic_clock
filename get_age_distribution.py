@@ -7,7 +7,7 @@ from matplotlib.ticker import PercentFormatter
 
 # Font and figure properties
 cm = 1/2.54
-path = "/BiO/Access/kyungwhan1998/miniconda3/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/Arial.ttf"
+path = "./Arial.ttf"
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
 plt.rcParams["font.size"] = 5
@@ -58,7 +58,8 @@ for i, proj in enumerate(projects):
     fig.text(0.02 + (i % 2) * 0.48, 0.95 - (i // 2) * 0.24, letters[i], ha='center', va='center', fontsize=plt.rcParams["font.size"] + 2, weight='bold')
 
 plt.tight_layout(rect=[0, 0, 1, 0.96])  # Adjust layout to make space for the letters
-plt.savefig("Figures/Extended_Data_Fig_5.pdf", dpi=600, bbox_inches="tight")
-plt.savefig("Figures/Extended_Data_Fig_5.png", dpi=600, bbox_inches="tight")
+plt.savefig("Figures/Extended_Data_Fig_5.pdf", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Extended_Data_Fig_5.png", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
+# %%
