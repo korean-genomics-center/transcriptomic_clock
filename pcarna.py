@@ -258,7 +258,7 @@ class PCARna():
             fig_letter = list(string.ascii_lowercase)[i]
             val_groupby_meta_pcx = df_pca_input.groupby(meta)[pcx].apply(np.array).tolist()
             val_groupby_meta_pcy = df_pca_input.groupby(meta)[pcy].apply(np.array).tolist()
-            cmap = get_cmap("Spectral", len(val_groupby_meta_pcx))
+            cmap = get_cmap("Reds", len(val_groupby_meta_pcx))
             list_colors = [cmap(ind) for ind in range(len(val_groupby_meta_pcx))]
             dim_level = 10
             list_colors_cmyk = [self.rgb_to_cmyk(rgb[0], rgb[1], rgb[2]) for rgb in list_colors]

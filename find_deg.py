@@ -63,8 +63,14 @@ list_deg_title = ["Acute Phase", "Mid Phase", "Late Phase"]
 
 # Colors for each category
 colors = {
-    "COVID19": "tab:green",
-    "AgePred": "tab:red",
+    "COVID19": "tab:blue",
+    "AgePred": "tab:orange",
+    "None": "tab:grey"
+}
+
+linecolors = {
+    "COVID19": "dodgerblue",
+    "AgePred": "gold",
     "None": "silver"
 }
 
@@ -130,27 +136,27 @@ for i, (file, sample, title) in enumerate(zip(list_deg_files, list_deg_samples, 
     list_genesymbol = list(map(lambda x: x.split("_")[-1], list_genesym_target))
     list_fc_target_visits.append(list_fc_target)
 
-    axes[i].scatter(x=list_fc, y=list_padj, s=2, edgecolors="darkgrey", linewidths=0.3, facecolor="None", alpha=1, zorder=0.5, label="None")
-    axes[i].scatter(x=list_fc_sig, y=list_padj_sig, s=2, edgecolors="forestgreen", linewidths=0.3, facecolor="None", alpha=1, zorder=0.5, label="COVID19")
-    axes[i].scatter(x=list_fc_target, y=list_padj_target, s=3, edgecolors="firebrick", linewidths=0.6, facecolor="None", zorder=900, label="AgePred")
+    axes[i].scatter(x=list_fc, y=list_padj, s=2, edgecolors=colors["None"], linewidths=0.3, facecolor="None", alpha=1, zorder=0.5, label="None")
+    axes[i].scatter(x=list_fc_sig, y=list_padj_sig, s=2, edgecolors=colors["COVID19"], linewidths=0.3, facecolor="None", alpha=1, zorder=0.5, label="COVID19")
+    axes[i].scatter(x=list_fc_target, y=list_padj_target, s=3, edgecolors=colors["AgePred"], linewidths=0.6, facecolor="None", zorder=900, label="AgePred")
 
     for fc, padj, genesymbol in zip(list_fc_target, list_padj_target, list_genesymbol):
         if genesymbol == "VSIG4":
             axes[i].plot([fc, 4.0], [padj, 100], linewidth=0.4, color="k", zorder=999)
             axes[i].hlines(y=100, xmin=4.0, xmax=4.9, linewidth=0.4, color="k", zorder=999)
-            axes[i].text(5, 100, genesymbol, fontstyle="italic", color="firebrick", ha="left", va="center", weight="bold", fontsize=plt.rcParams["font.size"], zorder=999)
+            axes[i].text(5, 100, genesymbol, fontstyle="italic", color=colors["AgePred"], ha="left", va="center", weight="bold", fontsize=plt.rcParams["font.size"], zorder=999)
 
     df_meta = pd.read_csv(sample, sep='\t')
     axes[i].set_title(f"{title} (N={len(df_meta)})", fontsize=plt.rcParams["font.size"] + 1, pad=0.2, weight="bold")
     axes[i].set_ylabel(f"Significance\n{r'-log$_{10}$(FDR)'}", fontsize=plt.rcParams["font.size"] + 1)
     if i == 2:
         axes[i].set_xlabel(f"Absolute Relative Expression\n|{r'log$_{2}$(COVID19/Healthy)'}|", fontsize=plt.rcParams["font.size"] + 1)
-    axes[i].axvline(x=(np.mean(list_fc_target)), linewidth=plot_linewidth, linestyle="solid", color=colors["AgePred"], zorder=10)
-    axes[i].axhline(y=(np.mean(list_padj_target)), linewidth=plot_linewidth, linestyle="solid", color=colors["AgePred"], zorder=10)
-    axes[i].axvline(x=(np.mean(list_fc_sig)), linewidth=plot_linewidth, linestyle="solid", color=colors["COVID19"], zorder=20)
-    axes[i].axhline(y=(np.mean(list_padj_sig)), linewidth=plot_linewidth, linestyle="solid", color=colors["COVID19"], zorder=20)
-    axes[i].axvline(x=(np.mean(list_fc_nosig)), linewidth=plot_linewidth, linestyle="solid", color=colors["None"], zorder=5)
-    axes[i].axhline(y=(np.mean(list_padj_nosig)), linewidth=plot_linewidth, linestyle="solid", color=colors["None"], zorder=5)
+    axes[i].axvline(x=(np.mean(list_fc_target)), linewidth=plot_linewidth, linestyle="solid", color=linecolors["AgePred"], zorder=10)
+    axes[i].axhline(y=(np.mean(list_padj_target)), linewidth=plot_linewidth, linestyle="solid", color=linecolors["AgePred"], zorder=10)
+    axes[i].axvline(x=(np.mean(list_fc_sig)), linewidth=plot_linewidth, linestyle="solid", color=linecolors["COVID19"], zorder=20)
+    axes[i].axhline(y=(np.mean(list_padj_sig)), linewidth=plot_linewidth, linestyle="solid", color=linecolors["COVID19"], zorder=20)
+    axes[i].axvline(x=(np.mean(list_fc_nosig)), linewidth=plot_linewidth, linestyle="solid", color=linecolors["None"], zorder=5)
+    axes[i].axhline(y=(np.mean(list_padj_nosig)), linewidth=plot_linewidth, linestyle="solid", color=linecolors["None"], zorder=5)
     axes[i].text(-0.33, 1.0, fig_letter, weight="bold", fontsize=plt.rcParams["font.size"] + 2, zorder=999, transform=axes[i].transAxes)
     axes[i].legend(markerscale=2.5, edgecolor="k", frameon=False)
     axes[i].set_xlim(-1.0, 8.0)
@@ -199,12 +205,6 @@ df_late = posthoc_dunn([list_fc_sig_visits[2], list_fc_target_visits[2], list_fc
 df_late.columns = list(colors.keys())
 df_late.index = list(colors.keys())
 
-linecolors = {
-    "COVID19": "forestgreen",
-    "AgePred": "firebrick",
-    "None": "darkgrey"
-}
-
 mean_values = {"COVID19": [], "AgePred": [], "None": []}
 categories = list(mean_values.keys())
 # Plotting the boxplots
@@ -249,12 +249,12 @@ for i, (phase, phase_data) in enumerate(data.items()):
         ax4.text(x=(2+2+width)/2, 
                       y=3.14,
                       s=round(df_late.loc['AgePred', 'None'], 2),  
-                      color= "tab:red",
+                      color= "red",
                       fontsize=plt.rcParams["font.size"],
                       ha="center")
-        ax4.hlines(y=3.1, xmin=2, xmax=2+width, color="tab:red", linewidth=0.4)
-        ax4.vlines(x=2, ymin=2.85, ymax=3.1, color="tab:red", linewidth=0.4)
-        ax4.vlines(x=2+width, ymin=2.85, ymax=3.1, color="tab:red", linewidth=0.4)
+        ax4.hlines(y=3.1, xmin=2, xmax=2+width, color="red", linewidth=0.4)
+        ax4.vlines(x=2, ymin=2.85, ymax=3.1, color="red", linewidth=0.4)
+        ax4.vlines(x=2+width, ymin=2.85, ymax=3.1, color="red", linewidth=0.4)
 
 for category in mean_values.keys():
     adjusted_positions = positions + (categories.index(category) - 1) * width
