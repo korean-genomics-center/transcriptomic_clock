@@ -278,6 +278,7 @@ ax4.spines[['right', 'top']].set_visible(False)
 plt.tight_layout()
 plt.savefig("./Figures/Extended_Data_Fig_8.pdf", dpi=300, bbox_inches="tight")
 plt.savefig("./Figures/Extended_Data_Fig_8.png", dpi=300, bbox_inches="tight")
+plt.savefig("./Figures/Extended_Data_Fig_8.jpeg", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 # %%

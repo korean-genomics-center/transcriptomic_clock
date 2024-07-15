@@ -86,6 +86,7 @@ fig, axes = pca.draw_pc_biplot(df_pca_meta,
 fig.tight_layout(pad=0, h_pad=1.5, w_pad=1.5)    # Adjusted padding to minimize margins while preventing overlap
 plt.savefig("Figures/Extended_Data_Fig_4.pdf", dpi=300, bbox_inches='tight')
 plt.savefig("Figures/Extended_Data_Fig_4.png", dpi=300, bbox_inches='tight')
+plt.savefig("Figures/Extended_Data_Fig_4.jpeg", dpi=300, bbox_inches='tight')
 plt.show()
 plt.close()
 

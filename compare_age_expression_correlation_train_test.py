@@ -118,6 +118,7 @@ fig.text(0.01, 0.50, 'd', ha='center', va='center', fontsize=plt.rcParams["font.
 fig.tight_layout()
 plt.savefig("./Figures/Extended_Data_Fig_3.pdf", dpi=300, bbox_inches="tight")
 plt.savefig("./Figures/Extended_Data_Fig_3.png", dpi=300, bbox_inches="tight")
+plt.savefig("./Figures/Extended_Data_Fig_3.jpeg", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 # %%

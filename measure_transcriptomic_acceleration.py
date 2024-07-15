@@ -273,6 +273,7 @@ plt.subplots_adjust(left=0.8)
 plt.tight_layout()
 plt.savefig("Figures/Fig_2.png", dpi=300, bbox_inches="tight")
 plt.savefig("Figures/Fig_2.pdf", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Fig_2.jpeg", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -327,6 +328,7 @@ for j in range(num_cohorts, N * N):
 # Adjust layout and show plot
 plt.savefig("Figures/Extended_Data_Fig_7.png", dpi=300, bbox_inches="tight")
 plt.savefig("Figures/Extended_Data_Fig_7.pdf", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Extended_Data_Fig_7.jpeg", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -429,6 +431,7 @@ for ax in axes[len(numerical_columns):]:
 plt.tight_layout()
 plt.savefig("./Figures/Extended_Data_Fig_9.pdf", dpi=300, bbox_inches="tight")
 plt.savefig("./Figures/Extended_Data_Fig_9.png", dpi=300, bbox_inches="tight")
+plt.savefig("./Figures/Extended_Data_Fig_9.jpeg", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 

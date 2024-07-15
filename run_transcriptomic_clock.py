@@ -331,6 +331,7 @@ ax8.set_axis_off()
 
 plt.savefig("Figures/Fig_1.pdf", dpi=300, bbox_inches="tight")
 plt.savefig("Figures/Fig_1.png", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Fig_1.jpeg", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -404,6 +405,7 @@ axs[-1].legend(handles, labels, loc='center', fontsize=plt.rcParams["font.size"]
 # Adjust layout and show plot
 plt.savefig("Figures/Extended_Data_Fig_6.png", dpi=300)
 plt.savefig("Figures/Extended_Data_Fig_6.pdf", dpi=300)
+plt.savefig("Figures/Extended_Data_Fig_6.jpeg", dpi=300)
 plt.show()
 plt.close()
 
@@ -693,6 +695,7 @@ ax4.set_axis_off()
 
 plt.savefig("Figures/Extended_Data_Fig_2.pdf", dpi=300, bbox_inches="tight")
 plt.savefig("Figures/Extended_Data_Fig_2.png", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Extended_Data_Fig_2.jpeg", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 

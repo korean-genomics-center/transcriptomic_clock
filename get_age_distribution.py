@@ -60,6 +60,7 @@ for i, proj in enumerate(projects):
 plt.tight_layout(rect=[0, 0, 1, 0.96])  # Adjust layout to make space for the letters
 plt.savefig("Figures/Extended_Data_Fig_5.pdf", dpi=300, bbox_inches="tight")
 plt.savefig("Figures/Extended_Data_Fig_5.png", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Extended_Data_Fig_5.jpeg", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 # %%
