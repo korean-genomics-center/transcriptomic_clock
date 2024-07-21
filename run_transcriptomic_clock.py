@@ -88,7 +88,7 @@ ax1.set_xlabel("Chronological Age (years)", fontsize=plt.rcParams["font.size"]+1
 # Set title for each subplot
 title = dict_name_conversion[list_test_group[0]]
 ax1.text(-0.27, 1.1, 
-        s="a", 
+        s="A", 
         fontdict={"fontsize":plt.rcParams["font.size"]+2, 
                     "fontweight":"bold"}, 
         ha='left', 
@@ -108,7 +108,7 @@ ax2.set_xlabel("Chronological Age (years)", fontsize=plt.rcParams["font.size"]+1
 # Set title for each subplot
 title = dict_name_conversion[list_test_group[1]]
 ax2.text(-0.27, 1.1, 
-        s="b", 
+        s="B", 
         fontdict={"fontsize":plt.rcParams["font.size"]+2, 
                     "fontweight":"bold"}, 
         ha='left', 
@@ -129,7 +129,7 @@ ax3.set_xlabel("Chronological Age (years)", fontsize=plt.rcParams["font.size"]+1
 # Set title for each subplot
 title = dict_name_conversion[list_test_group[2]]
 ax3.text(-0.27, 1.1, 
-        s="c", 
+        s="C", 
         fontdict={"fontsize":plt.rcParams["font.size"]+2, 
                     "fontweight":"bold"}, 
         ha='left', 
@@ -146,7 +146,7 @@ clock.draw_feature_importance_barplot(ax4, fontsize=plt.rcParams["font.size"])
 # Adding text
 ax4.text(-0.47, 
         1.025, 
-        s="d", 
+        s="D", 
         fontdict={"fontsize":plt.rcParams["font.size"]+2, 
                 "fontweight":"bold"}, 
         ha='left', 
@@ -263,7 +263,7 @@ ax5.set_ylabel("")
 ax5.set_xlabel("Fold Enrichment", fontsize=plt.rcParams["font.size"]+1)
 ax5.set_xlim(0, 40)
 ax5.set_title(name_db1, fontsize = plt.rcParams["font.size"]+1, fontweight="bold", pad=1.0)
-ax5.text(-1.5, 1.09, "e", transform = ax5.transAxes, size = plt.rcParams["font.size"]+2, weight = "bold")
+ax5.text(-1.5, 1.09, "E", transform = ax5.transAxes, size = plt.rcParams["font.size"]+2, weight = "bold")
 
 # db2
 sns.scatterplot(data = table_db2_filtered,
@@ -287,7 +287,7 @@ ax6.set_ylabel("")
 ax6.set_xlabel("Fold Enrichment", fontsize=plt.rcParams["font.size"]+1)
 ax6.set_xlim(0, 20)
 ax6.set_title(name_db2, fontsize = plt.rcParams["font.size"]+1, fontweight="bold", pad=1.0)
-ax6.text(-1.5, 1.0, "f", transform = ax6.transAxes, size = plt.rcParams["font.size"]+2, weight = "bold")
+ax6.text(-1.5, 1.0, "F", transform = ax6.transAxes, size = plt.rcParams["font.size"]+2, weight = "bold")
 
 # Legend (FDR)
 import matplotlib as mpl
@@ -329,9 +329,8 @@ ax8.set_axis_off()
 # ax9.add_patch(rec)
 # ax9.set_axis_off()
 
-plt.savefig("Figures/Fig_1.pdf", dpi=300, bbox_inches="tight")
-plt.savefig("Figures/Fig_1.png", dpi=300, bbox_inches="tight")
-plt.savefig("Figures/Fig_1.jpeg", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Figure_1.tiff", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Figure_1.png", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -378,7 +377,7 @@ for i, testname in enumerate(list_test_group):
         ax.set_xlabel("Chronological Age (years)", fontsize=plt.rcParams["font.size"]+1)
         # Set title for each subplot
         title = dict_name_conversion[testname]
-        figletter=chr(ord('a') + i)
+        figletter=chr(ord('A') + i)
         ax.text(-0.32, 1.2, 
                 s=figletter, 
                 fontdict={"fontsize":plt.rcParams["font.size"]+2, 
@@ -403,9 +402,8 @@ handles, labels = axs[0].get_legend_handles_labels()
 axs[-1].legend(handles, labels, loc='center', fontsize=plt.rcParams["font.size"]+1)
 
 # Adjust layout and show plot
-plt.savefig("Figures/Extended_Data_Fig_6.png", dpi=300)
-plt.savefig("Figures/Extended_Data_Fig_6.pdf", dpi=300)
-plt.savefig("Figures/Extended_Data_Fig_6.jpeg", dpi=300)
+plt.savefig("Figures/Supplementary_Figure_6.png", dpi=300)
+plt.savefig("Figures/Supplementary_Figure_6.tiff", dpi=300)
 plt.show()
 plt.close()
 
@@ -616,7 +614,7 @@ ax1.set_ylabel("")
 ax1.set_xlabel("Fold Enrichment", fontsize=plt.rcParams["font.size"]+1)
 ax1.set_xlim(0, 4)
 ax1.set_title(name_db1, fontsize = plt.rcParams["font.size"]+1, fontweight="bold", pad=1)
-ax1.text(-1.2, 1.02, "a", transform = ax1.transAxes, size = plt.rcParams["font.size"]+2, weight = "bold")
+ax1.text(-1.2, 1.02, "A", transform = ax1.transAxes, size = plt.rcParams["font.size"]+2, weight = "bold")
 
 # db2
 import textwrap
@@ -652,7 +650,7 @@ ax2.set_ylabel("")
 ax2.set_xlabel("Fold Enrichment", fontsize=plt.rcParams["font.size"]+1)
 ax2.set_xlim(0, 4)
 ax2.set_title(name_db2, fontsize = plt.rcParams["font.size"]+1, fontweight="bold", pad=1)
-ax2.text(-1.2, 1.02, "b", transform = ax2.transAxes, size = plt.rcParams["font.size"]+2, weight = "bold")
+ax2.text(-1.2, 1.02, "B", transform = ax2.transAxes, size = plt.rcParams["font.size"]+2, weight = "bold")
 
 # Legend (FDR)
 import matplotlib as mpl
@@ -693,9 +691,8 @@ ax4.set_axis_off()
 # ax5.add_patch(rec)
 # ax5.set_axis_off()
 
-plt.savefig("Figures/Extended_Data_Fig_2.pdf", dpi=300, bbox_inches="tight")
-plt.savefig("Figures/Extended_Data_Fig_2.png", dpi=300, bbox_inches="tight")
-plt.savefig("Figures/Extended_Data_Fig_2.jpeg", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Supplementary_Figure_2.tiff", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Supplementary_Figure_2.png", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 

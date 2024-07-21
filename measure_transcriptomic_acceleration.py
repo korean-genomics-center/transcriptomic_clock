@@ -126,22 +126,22 @@ gsfig = gridspec.GridSpec(
 
 gs1 = gsfig[0:20, 70:100]
 ax1 = fig.add_subplot(gs1)
-ax1.text(-0.3, 1.1, "b", transform=ax1.transAxes,
+ax1.text(-0.3, 1.1, "B", transform=ax1.transAxes,
         fontsize=plt.rcParams["font.size"]+2, fontweight='bold', va='top', ha='right')
 
 gs2 = gsfig[30:50, 70:100]
 ax2 = fig.add_subplot(gs2)
-ax2.text(-0.3, 1.1, "c", transform=ax2.transAxes,
+ax2.text(-0.3, 1.1, "C", transform=ax2.transAxes,
         fontsize=plt.rcParams["font.size"]+2, fontweight='bold', va='top', ha='right')
 
 gs3 = gsfig[60:80, 70:100] 
 ax3 = fig.add_subplot(gs3)
-ax3.text(-0.3, 1.1, "d", transform=ax3.transAxes,
+ax3.text(-0.3, 1.1, "D", transform=ax3.transAxes,
         fontsize=plt.rcParams["font.size"]+2, fontweight='bold', va='top', ha='right')
 
 gs4 = gsfig[0:80, 0:30]
 ax4 = fig.add_subplot(gs4)
-ax4.text(-0.75, 1.02, "a", transform=ax4.transAxes,
+ax4.text(-0.75, 1.02, "A", transform=ax4.transAxes,
         fontsize=plt.rcParams["font.size"]+2, fontweight='bold', va='top', ha='right')
 
 plt.rcParams["font.size"] = 5
@@ -271,9 +271,8 @@ plt.subplots_adjust(left=0.8)
 
 # Display the plot
 plt.tight_layout()
-plt.savefig("Figures/Fig_2.png", dpi=300, bbox_inches="tight")
-plt.savefig("Figures/Fig_2.pdf", dpi=300, bbox_inches="tight")
-plt.savefig("Figures/Fig_2.jpeg", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Figure_2.png", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Figure_2.tiff", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -317,7 +316,7 @@ for i, cohort in enumerate(list_cohorts):
     ax.set_xlim(int(min(error))-2, int(max(error))+2)
     ax.yaxis.set_major_locator(MaxNLocator(integer=True))
     # Label subplot with letters a-z
-    subplot_letter = chr(ord('a') + i)  # Convert integer index to character
+    subplot_letter = chr(ord('A') + i)  # Convert integer index to character
     ax.text(-0.5, 1.2, subplot_letter, transform=ax.transAxes,
             fontsize=plt.rcParams["font.size"]+1, fontweight='bold', va='top', ha='right')
 
@@ -326,9 +325,8 @@ for j in range(num_cohorts, N * N):
     axs.flatten()[j].axis('off')
 
 # Adjust layout and show plot
-plt.savefig("Figures/Extended_Data_Fig_7.png", dpi=300, bbox_inches="tight")
-plt.savefig("Figures/Extended_Data_Fig_7.pdf", dpi=300, bbox_inches="tight")
-plt.savefig("Figures/Extended_Data_Fig_7.jpeg", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Supplementary_Figure_7.png", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Supplementary_Figure_7.tiff", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -429,9 +427,8 @@ for ax in axes[len(numerical_columns):]:
     ax.axis('off')
 
 plt.tight_layout()
-plt.savefig("./Figures/Extended_Data_Fig_9.pdf", dpi=300, bbox_inches="tight")
-plt.savefig("./Figures/Extended_Data_Fig_9.png", dpi=300, bbox_inches="tight")
-plt.savefig("./Figures/Extended_Data_Fig_9.jpeg", dpi=300, bbox_inches="tight")
+plt.savefig("./Figures/Supplementary_Figure_9.tiff", dpi=300, bbox_inches="tight")
+plt.savefig("./Figures/Supplementary_Figure_9.png", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -533,8 +530,8 @@ plt.close()
 
 
 # plt.tight_layout()
-# plt.savefig("./Figures/Extended_Data_Fig_11.pdf", dpi=300, bbox_inches="tight")
-# plt.savefig("./Figures/Extended_Data_Fig_11.png", dpi=300, bbox_inches="tight")
+# plt.savefig("./Figures/Supplementary_Figure_11.pdf", dpi=300, bbox_inches="tight")
+# plt.savefig("./Figures/Supplementary_Figure_11.png", dpi=300, bbox_inches="tight")
 # plt.show()
 # plt.close()
 

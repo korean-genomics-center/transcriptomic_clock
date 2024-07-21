@@ -255,7 +255,7 @@ class PCARna():
             axes = np.array([axes]).flatten()
         
         for i, (meta, ax) in enumerate(zip(list_meta_columns, axes)):
-            fig_letter = list(string.ascii_lowercase)[i]
+            fig_letter = list(string.ascii_uppercase)[i]
             val_groupby_meta_pcx = df_pca_input.groupby(meta)[pcx].apply(np.array).tolist()
             val_groupby_meta_pcy = df_pca_input.groupby(meta)[pcy].apply(np.array).tolist()
             cmap = get_cmap("Reds", len(val_groupby_meta_pcx))

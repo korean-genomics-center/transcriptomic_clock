@@ -30,7 +30,7 @@ dict_conversion = {"healthy_illumina": "Healthy Cohort 1",
 # Create the figure and subplots
 fig, axes = plt.subplots(4, 2, figsize=figsize)
 axes = axes.flatten()
-letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 
 for i, proj in enumerate(projects):
     ax = axes[i]
@@ -58,9 +58,8 @@ for i, proj in enumerate(projects):
     fig.text(0.02 + (i % 2) * 0.48, 0.95 - (i // 2) * 0.24, letters[i], ha='center', va='center', fontsize=plt.rcParams["font.size"] + 2, weight='bold')
 
 plt.tight_layout(rect=[0, 0, 1, 0.96])  # Adjust layout to make space for the letters
-plt.savefig("Figures/Extended_Data_Fig_5.pdf", dpi=300, bbox_inches="tight")
-plt.savefig("Figures/Extended_Data_Fig_5.png", dpi=300, bbox_inches="tight")
-plt.savefig("Figures/Extended_Data_Fig_5.jpeg", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Supplementary_Figure_5.tiff", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Supplementary_Figure_5.png", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 # %%

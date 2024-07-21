@@ -76,7 +76,7 @@ linecolors = {
 
 list_df_deg_phase_target = list()
 for i, (file, sample, title) in enumerate(zip(list_deg_files, list_deg_samples, list_deg_title)):
-    fig_letter = list(string.ascii_lowercase)[i]
+    fig_letter = list(string.ascii_uppercase)[i]
     df_deg = pd.read_csv(file, sep='\t')
     df_deg_phase = df_deg.copy()
     df_deg_phase["phase"] = title
@@ -91,7 +91,7 @@ list_fc_sig_visits = []
 list_fc_nosig_visits = []
 list_fc_target_visits = []
 for i, (file, sample, title) in enumerate(zip(list_deg_files, list_deg_samples, list_deg_title)):
-    fig_letter = list(string.ascii_lowercase)[i]
+    fig_letter = list(string.ascii_uppercase)[i]
     df_deg = pd.read_csv(file, sep='\t')
     df_deg_phase = df_deg.copy()
     df_deg_phase = df_deg_phase[df_deg_phase["baseMean"] > 1]
@@ -162,7 +162,7 @@ for i, (file, sample, title) in enumerate(zip(list_deg_files, list_deg_samples, 
     axes[i].set_xlim(-1.0, 8.0)
     axes[i].set_ylim(-10, 310)
 
-fig_letter = list(string.ascii_lowercase)[len(list_deg_files)]
+fig_letter = list(string.ascii_uppercase)[len(list_deg_files)]
 
 # Provided data
 data = {
@@ -276,9 +276,8 @@ ax4.text(-0.43, 1.0,
 ax4.spines[['right', 'top']].set_visible(False)
 
 plt.tight_layout()
-plt.savefig("./Figures/Extended_Data_Fig_8.pdf", dpi=300, bbox_inches="tight")
-plt.savefig("./Figures/Extended_Data_Fig_8.png", dpi=300, bbox_inches="tight")
-plt.savefig("./Figures/Extended_Data_Fig_8.jpeg", dpi=300, bbox_inches="tight")
+plt.savefig("./Figures/Supplementary_Figure_8.tiff", dpi=300, bbox_inches="tight")
+plt.savefig("./Figures/Supplementary_Figure_8.png", dpi=300, bbox_inches="tight")
 plt.show()
 plt.close()
 # %%
