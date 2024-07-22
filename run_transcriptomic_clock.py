@@ -339,7 +339,7 @@ cm = 1/2.54
 path = "/BiO/Access/kyungwhan1998/miniconda3/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/Arial.ttf"
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
-plt.rcParams["font.size"] = 5
+plt.rcParams["font.size"] = 7
 width = 11*cm
 height = 22*cm
 
@@ -378,7 +378,7 @@ for i, testname in enumerate(list_test_group):
         # Set title for each subplot
         title = dict_name_conversion[testname]
         figletter=chr(ord('A') + i)
-        ax.text(-0.2, 1.1, 
+        ax.text(-0.25, 1.1, 
                 s=figletter, 
                 fontdict={"fontsize":plt.rcParams["font.size"]+2, 
                           "fontweight":"bold"}, 

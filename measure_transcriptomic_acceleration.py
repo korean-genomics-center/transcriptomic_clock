@@ -106,9 +106,9 @@ cm = 1/2.54
 path = "./Arial.ttf"
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
-plt.rcParams["font.size"] = 5
-width = 10*cm
-height = 10*cm
+plt.rcParams["font.size"] = 9
+width = 16*cm
+height = 16*cm
 figsize = (width, height)
 plot_linewidth = 1
 
@@ -144,7 +144,6 @@ ax4 = fig.add_subplot(gs4)
 ax4.text(-0.75, 1.02, "A", transform=ax4.transAxes,
         fontsize=plt.rcParams["font.size"]+2, fontweight='bold', va='top', ha='right')
 
-plt.rcParams["font.size"] = 5
 sns.barplot(df_merge_v1, 
                x="CRP_Group", 
                y = "error", 
@@ -236,12 +235,12 @@ ax4.spines['top'].set_visible(False)
 for group, cohorts in dict_groups.items():
     first_cohort_index = list_cohorts.index(cohorts[0])
     group_label_y = (first_cohort_index + list_cohorts.index(cohorts[-1])) / 2 # Position label in the middle of the group
-    ax4.text(-55, group_label_y, group, va='center', ha='center', color='black', fontsize=plt.rcParams["font.size"], weight="bold", rotation=90)
+    ax4.text(-57, group_label_y, group, va='center', ha='center', color='black', fontsize=plt.rcParams["font.size"], weight="bold", rotation=90)
    
 line_adjust = 0.2
-ax4.vlines(x=-50, ymin=0-line_adjust, ymax=1+line_adjust, color='black', linewidth=plot_linewidth-0.5, clip_on = False)
-ax4.vlines(x=-50, ymin=2-line_adjust, ymax=5+line_adjust, color='black', linewidth=plot_linewidth-0.5, clip_on = False)
-ax4.vlines(x=-50, ymin=6-line_adjust, ymax=8+line_adjust, color='black', linewidth=plot_linewidth-0.5, clip_on = False)
+ax4.vlines(x=-52, ymin=0-line_adjust, ymax=1+line_adjust, color='black', linewidth=plot_linewidth-0.5, clip_on = False)
+ax4.vlines(x=-52, ymin=2-line_adjust, ymax=5+line_adjust, color='black', linewidth=plot_linewidth-0.5, clip_on = False)
+ax4.vlines(x=-52, ymin=6-line_adjust, ymax=8+line_adjust, color='black', linewidth=plot_linewidth-0.5, clip_on = False)
 
 for i, cohort in enumerate(list_cohorts):
     if (list_pval_corrected[i] < 0.05):
