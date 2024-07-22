@@ -111,9 +111,9 @@ ax4.margins(0.01)
 
 # Add figure letters
 fig.text(0.01, 0.95, 'A', ha='center', va='center', fontsize=plt.rcParams["font.size"]+2, weight='bold')
-fig.text(0.32, 0.95, 'B', ha='center', va='center', fontsize=plt.rcParams["font.size"]+2, weight='bold')
-fig.text(0.63, 0.95, 'C', ha='center', va='center', fontsize=plt.rcParams["font.size"]+2, weight='bold')
-fig.text(0.01, 0.50, 'D', ha='center', va='center', fontsize=plt.rcParams["font.size"]+2, weight='bold')
+fig.text(0.325, 0.95, 'B', ha='center', va='center', fontsize=plt.rcParams["font.size"]+2, weight='bold')
+fig.text(0.635, 0.95, 'C', ha='center', va='center', fontsize=plt.rcParams["font.size"]+2, weight='bold')
+fig.text(0.01, 0.45, 'D', ha='center', va='center', fontsize=plt.rcParams["font.size"]+2, weight='bold')
 
 fig.tight_layout()
 plt.savefig("./Figures/Supplementary_Figure_3.tiff", dpi=600, bbox_inches="tight")

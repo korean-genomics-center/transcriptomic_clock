@@ -21,7 +21,7 @@ plt.rcParams['font.family'] = prop.get_name()
 plt.rcParams["font.size"] = 6
 plot_linewidth = 0.5
 
-figsize = (10*cm, 10*cm)
+figsize = (10*cm, 12*cm)
 fig = plt.figure(figsize=figsize)
 
 pad = 11
@@ -151,6 +151,8 @@ for i, (file, sample, title) in enumerate(zip(list_deg_files, list_deg_samples, 
     axes[i].set_ylabel(f"Significance\n{r'-log$_{10}$(FDR)'}", fontsize=plt.rcParams["font.size"] + 1)
     if i == 2:
         axes[i].set_xlabel(f"Absolute Relative Expression\n|{r'log$_{2}$(COVID19/Healthy)'}|", fontsize=plt.rcParams["font.size"] + 1)
+    else:
+        axes[i].set_xlabel(f"Absolute Relative Expression", fontsize=plt.rcParams["font.size"] + 1)
     axes[i].axvline(x=(np.mean(list_fc_target)), linewidth=plot_linewidth, linestyle="solid", color=linecolors["AgePred"], zorder=10)
     axes[i].axhline(y=(np.mean(list_padj_target)), linewidth=plot_linewidth, linestyle="solid", color=linecolors["AgePred"], zorder=10)
     axes[i].axvline(x=(np.mean(list_fc_sig)), linewidth=plot_linewidth, linestyle="solid", color=linecolors["COVID19"], zorder=20)

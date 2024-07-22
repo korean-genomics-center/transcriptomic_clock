@@ -30,7 +30,6 @@ dict_conversion = {"healthy_illumina": "Healthy Cohort 1",
 # Create the figure and subplots
 fig, axes = plt.subplots(4, 2, figsize=figsize)
 axes = axes.flatten()
-letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 
 for i, proj in enumerate(projects):
     ax = axes[i]
@@ -54,10 +53,12 @@ for i, proj in enumerate(projects):
     ax.set_xlabel('Chronological Age (years)', fontsize=plt.rcParams["font.size"]+1)
     ax.set_ylabel('Sample Proportion (%)', fontsize=plt.rcParams["font.size"]+1)
     ax.set_xlim(15, 80)
-    # Add figure letter
-    fig.text(0.02 + (i % 2) * 0.48, 0.95 - (i // 2) * 0.24, letters[i], ha='center', va='center', fontsize=plt.rcParams["font.size"] + 2, weight='bold')
 
-plt.tight_layout(rect=[0, 0, .97, .95])  # Adjust layout to make space for the letters
+    figletter = chr(ord('A') + i)  # Convert integer index to character
+    ax.text(-0.3, 1.05, figletter, transform=ax.transAxes,
+        fontsize=plt.rcParams["font.size"]+2, fontweight='bold', va='top', ha='right')
+
+plt.tight_layout(rect=[0, 0, .95, .95])  # Adjust layout to make space for the letters
 plt.savefig("Figures/Supplementary_Figure_5.tiff", dpi=600, bbox_inches="tight")
 plt.savefig("Figures/Supplementary_Figure_5.png", dpi=600, bbox_inches="tight")
 plt.show()

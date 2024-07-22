@@ -60,10 +60,10 @@ ax3 = fig.add_subplot(gs3)
 gs4 = gsfig[10:200, 55:70]
 ax4 = fig.add_subplot(gs4) 
 
-gs5 = gsfig[15:85, 140:170]
+gs5 = gsfig[15:85, 150:180]
 ax5 = fig.add_subplot(gs5)
 
-gs6 = gsfig[110:160, 140:170]
+gs6 = gsfig[110:160, 150:180]
 ax6 = fig.add_subplot(gs6)
 
 gs7 = gsfig[180:185, 110:160]
@@ -174,7 +174,7 @@ ax4.legend(loc='upper left',
             fontsize=plt.rcParams["font.size"])
 
 name_db1 = "Gene Ontology\n(Biological Process)"
-name_db2 = "Molecular Signatures Database\n(Cell Type)"
+name_db2 = "Molecular Signatures\nDatabase (Cell Type)"
 path_db1 = "Enrichment/282_GOBP_10MinPathway_001FDR.csv"
 path_db2 = "Enrichment/282_MSigDB_10MinPathway_001FDR.csv"
 n_max_show = 10
@@ -263,7 +263,7 @@ ax5.set_ylabel("")
 ax5.set_xlabel("Fold Enrichment", fontsize=plt.rcParams["font.size"]+1)
 ax5.set_xlim(0, 40)
 ax5.set_title(name_db1, fontsize = plt.rcParams["font.size"]+1, fontweight="bold", pad=1.0)
-ax5.text(-1.5, 1.09, "E", transform = ax5.transAxes, size = plt.rcParams["font.size"]+2, weight = "bold")
+ax5.text(-1.6, 1.09, "E", transform = ax5.transAxes, size = plt.rcParams["font.size"]+2, weight = "bold")
 
 # db2
 sns.scatterplot(data = table_db2_filtered,
@@ -287,7 +287,7 @@ ax6.set_ylabel("")
 ax6.set_xlabel("Fold Enrichment", fontsize=plt.rcParams["font.size"]+1)
 ax6.set_xlim(0, 20)
 ax6.set_title(name_db2, fontsize = plt.rcParams["font.size"]+1, fontweight="bold", pad=1.0)
-ax6.text(-1.5, 1.0, "F", transform = ax6.transAxes, size = plt.rcParams["font.size"]+2, weight = "bold")
+ax6.text(-1.6, 1.0, "F", transform = ax6.transAxes, size = plt.rcParams["font.size"]+2, weight = "bold")
 
 # Legend (FDR)
 import matplotlib as mpl
@@ -336,7 +336,7 @@ plt.close()
 
 # %%
 cm = 1/2.54
-path = "/BiO/Access/kyungwhan1998/miniconda3/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/Arial.ttf"
+path = "./Arial.ttf"
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
 plt.rcParams["font.size"] = 7
@@ -428,14 +428,14 @@ def make_df_perfomance_evaluation(workdir, testing_data, list_corr_thres):
 
 # %% [draw_plot_performance_profile]
 # cm = 1/2.54
-# path = "/BiO/Access/kyungwhan1998/miniconda3/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/Arial.ttf"
+# path = "./Arial.ttf"
 # prop = fm.FontProperties(fname=path)
 # plt.rcParams['font.family'] = prop.get_name()
 # plt.rcParams["font.size"] = 5
 # width = 10*cm
 # height = 5*cm
 # figsize = (width, height)
-# plot_linewidth = 1
+# plot_linewidth = 3
 
 # WORKDIR = "./LASSO_INFO/standardized/healthy_illumina"
 # dir_trained_model = f"{WORKDIR}/corr_0.3_above_pval_0.05_below"
@@ -493,7 +493,7 @@ def make_df_perfomance_evaluation(workdir, testing_data, list_corr_thres):
 # %%
 
 cm = 1/2.54
-path = "/BiO/Access/kyungwhan1998/miniconda3/lib/python3.11/site-packages/matplotlib/mpl-data/fonts/ttf/Arial.ttf"
+path = "./Arial.ttf"
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
 plt.rcParams["font.size"] = 5
@@ -618,8 +618,6 @@ ax1.text(-1.0, 1.02, "A", transform = ax1.transAxes, size = plt.rcParams["font.s
 
 # db2
 import textwrap
-
-
 # Define a function to wrap text
 def wrap_labels(labels, width):
     return ['\n'.join(textwrap.wrap(label, width)) for label in labels]
@@ -685,11 +683,6 @@ ax4.legend(list_handles,
            bbox_to_anchor = (1, 0.8),
            frameon = True)
 ax4.set_axis_off()
-
-# # Draw Rectangle
-# rec = mpl.patches.Rectangle((0,0), 1, 1, linewidth = 1, edgecolor = "gray", facecolor = "none")
-# ax5.add_patch(rec)
-# ax5.set_axis_off()
 
 plt.savefig("Figures/Supplementary_Figure_2.tiff", dpi=600, bbox_inches="tight")
 plt.savefig("Figures/Supplementary_Figure_2.png", dpi=600, bbox_inches="tight")
