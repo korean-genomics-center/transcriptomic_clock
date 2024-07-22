@@ -58,8 +58,8 @@ for i, proj in enumerate(projects):
     fig.text(0.02 + (i % 2) * 0.48, 0.95 - (i // 2) * 0.24, letters[i], ha='center', va='center', fontsize=plt.rcParams["font.size"] + 2, weight='bold')
 
 plt.tight_layout(rect=[0, 0, .97, .95])  # Adjust layout to make space for the letters
-plt.savefig("Figures/Supplementary_Figure_5.tiff", dpi=300, bbox_inches="tight")
-plt.savefig("Figures/Supplementary_Figure_5.png", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Supplementary_Figure_5.tiff", dpi=600, bbox_inches="tight")
+plt.savefig("Figures/Supplementary_Figure_5.png", dpi=600, bbox_inches="tight")
 plt.show()
 plt.close()
 # %%

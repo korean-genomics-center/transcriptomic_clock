@@ -84,8 +84,8 @@ fig, axes = pca.draw_pc_biplot(df_pca_meta,
                                plot_linewidth = plot_linewidth, 
                                figsize=figsize)
 fig.tight_layout(pad=0, h_pad=1.5, w_pad=1.5)    # Adjusted padding to minimize margins while preventing overlap
-plt.savefig("Figures/Supplementary_Figure_4.tiff", dpi=300, bbox_inches='tight')
-plt.savefig("Figures/Supplementary_Figure_4.png", dpi=300, bbox_inches='tight')
+plt.savefig("Figures/Supplementary_Figure_4.tiff", dpi=600, bbox_inches='tight')
+plt.savefig("Figures/Supplementary_Figure_4.png", dpi=600, bbox_inches='tight')
 plt.show()
 plt.close()
 

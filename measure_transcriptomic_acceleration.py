@@ -271,8 +271,8 @@ plt.subplots_adjust(left=0.8)
 
 # Display the plot
 plt.tight_layout()
-plt.savefig("Figures/Figure_2.png", dpi=300, bbox_inches="tight")
-plt.savefig("Figures/Figure_2.tiff", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Figure_2.png", dpi=600, bbox_inches="tight")
+plt.savefig("Figures/Figure_2.tiff", dpi=600, bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -317,7 +317,7 @@ for i, cohort in enumerate(list_cohorts):
     ax.yaxis.set_major_locator(MaxNLocator(integer=True))
     # Label subplot with letters a-z
     subplot_letter = chr(ord('A') + i)  # Convert integer index to character
-    ax.text(-0.5, 1.2, subplot_letter, transform=ax.transAxes,
+    ax.text(-0.25, 1.1, subplot_letter, transform=ax.transAxes,
             fontsize=plt.rcParams["font.size"]+1, fontweight='bold', va='top', ha='right')
 
 # Hide unused subplots if any
@@ -325,8 +325,8 @@ for j in range(num_cohorts, N * N):
     axs.flatten()[j].axis('off')
 
 # Adjust layout and show plot
-plt.savefig("Figures/Supplementary_Figure_7.png", dpi=300, bbox_inches="tight")
-plt.savefig("Figures/Supplementary_Figure_7.tiff", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Supplementary_Figure_7.png", dpi=600, bbox_inches="tight")
+plt.savefig("Figures/Supplementary_Figure_7.tiff", dpi=600, bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -427,8 +427,8 @@ for ax in axes[len(numerical_columns):]:
     ax.axis('off')
 
 plt.tight_layout()
-plt.savefig("./Figures/Supplementary_Figure_9.tiff", dpi=300, bbox_inches="tight")
-plt.savefig("./Figures/Supplementary_Figure_9.png", dpi=300, bbox_inches="tight")
+plt.savefig("./Figures/Supplementary_Figure_9.tiff", dpi=450, bbox_inches="tight")
+plt.savefig("./Figures/Supplementary_Figure_9.png", dpi=450, bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -530,8 +530,8 @@ plt.close()
 
 
 # plt.tight_layout()
-# plt.savefig("./Figures/Supplementary_Figure_11.pdf", dpi=300, bbox_inches="tight")
-# plt.savefig("./Figures/Supplementary_Figure_11.png", dpi=300, bbox_inches="tight")
+# plt.savefig("./Figures/Supplementary_Figure_11.pdf", dpi=500, bbox_inches="tight")
+# plt.savefig("./Figures/Supplementary_Figure_11.png", dpi=500, bbox_inches="tight")
 # plt.show()
 # plt.close()
 

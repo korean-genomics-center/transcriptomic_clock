@@ -30,9 +30,9 @@ cm = 1/2.54
 path = "./Arial.ttf"
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
-plt.rcParams["font.size"] = 5
-width = 12*cm
-height = 12*cm
+plt.rcParams["font.size"] = 7
+width = 16*cm
+height = 16*cm
 figsize = (width, height)
 plot_linewidth = 3
 
@@ -329,8 +329,8 @@ ax8.set_axis_off()
 # ax9.add_patch(rec)
 # ax9.set_axis_off()
 
-plt.savefig("Figures/Figure_1.tiff", dpi=300, bbox_inches="tight")
-plt.savefig("Figures/Figure_1.png", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Figure_1.tiff", dpi=600, bbox_inches="tight")
+plt.savefig("Figures/Figure_1.png", dpi=600, bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -340,8 +340,8 @@ path = "/BiO/Access/kyungwhan1998/miniconda3/lib/python3.11/site-packages/matplo
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
 plt.rcParams["font.size"] = 5
-width = 8*cm
-height = 16*cm
+width = 11*cm
+height = 22*cm
 
 list_test_group = ["viral_v1_long", 
                    "viral_v2_long", 
@@ -378,7 +378,7 @@ for i, testname in enumerate(list_test_group):
         # Set title for each subplot
         title = dict_name_conversion[testname]
         figletter=chr(ord('A') + i)
-        ax.text(-0.32, 1.2, 
+        ax.text(-0.2, 1.1, 
                 s=figletter, 
                 fontdict={"fontsize":plt.rcParams["font.size"]+2, 
                           "fontweight":"bold"}, 
@@ -402,8 +402,8 @@ handles, labels = axs[0].get_legend_handles_labels()
 axs[-1].legend(handles, labels, loc='center', fontsize=plt.rcParams["font.size"]+1)
 
 # Adjust layout and show plot
-plt.savefig("Figures/Supplementary_Figure_6.png", dpi=300)
-plt.savefig("Figures/Supplementary_Figure_6.tiff", dpi=300)
+plt.savefig("Figures/Supplementary_Figure_6.png", dpi=600)
+plt.savefig("Figures/Supplementary_Figure_6.tiff", dpi=600)
 plt.show()
 plt.close()
 
@@ -497,8 +497,8 @@ path = "/BiO/Access/kyungwhan1998/miniconda3/lib/python3.11/site-packages/matplo
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
 plt.rcParams["font.size"] = 5
-width = 10/1.4*cm
-height = 14/1.4*cm
+width = 10*cm
+height = 14*cm
 figsize = (width, height)
 plot_linewidth = 3
 
@@ -514,10 +514,10 @@ gsfig = gridspec.GridSpec(
 gs1 = gsfig[0:95, 0:30]
 ax1 = fig.add_subplot(gs1)
 
-gs2 = gsfig[0:95, 70:100]
+gs2 = gsfig[0:95, 60:90]
 ax2 = fig.add_subplot(gs2)
 
-gs3 = gsfig[115:120, 0:30] 
+gs3 = gsfig[110:115, 0:30] 
 ax3 = fig.add_subplot(gs3)
 
 gs4 = gsfig[105:120, 60:90]
@@ -614,7 +614,7 @@ ax1.set_ylabel("")
 ax1.set_xlabel("Fold Enrichment", fontsize=plt.rcParams["font.size"]+1)
 ax1.set_xlim(0, 4)
 ax1.set_title(name_db1, fontsize = plt.rcParams["font.size"]+1, fontweight="bold", pad=1)
-ax1.text(-1.2, 1.02, "A", transform = ax1.transAxes, size = plt.rcParams["font.size"]+2, weight = "bold")
+ax1.text(-1.0, 1.02, "A", transform = ax1.transAxes, size = plt.rcParams["font.size"]+2, weight = "bold")
 
 # db2
 import textwrap
@@ -650,7 +650,7 @@ ax2.set_ylabel("")
 ax2.set_xlabel("Fold Enrichment", fontsize=plt.rcParams["font.size"]+1)
 ax2.set_xlim(0, 4)
 ax2.set_title(name_db2, fontsize = plt.rcParams["font.size"]+1, fontweight="bold", pad=1)
-ax2.text(-1.2, 1.02, "B", transform = ax2.transAxes, size = plt.rcParams["font.size"]+2, weight = "bold")
+ax2.text(-0.9, 1.02, "B", transform = ax2.transAxes, size = plt.rcParams["font.size"]+2, weight = "bold")
 
 # Legend (FDR)
 import matplotlib as mpl
@@ -691,8 +691,8 @@ ax4.set_axis_off()
 # ax5.add_patch(rec)
 # ax5.set_axis_off()
 
-plt.savefig("Figures/Supplementary_Figure_2.tiff", dpi=300, bbox_inches="tight")
-plt.savefig("Figures/Supplementary_Figure_2.png", dpi=300, bbox_inches="tight")
+plt.savefig("Figures/Supplementary_Figure_2.tiff", dpi=600, bbox_inches="tight")
+plt.savefig("Figures/Supplementary_Figure_2.png", dpi=600, bbox_inches="tight")
 plt.show()
 plt.close()
 

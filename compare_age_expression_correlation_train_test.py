@@ -116,8 +116,8 @@ fig.text(0.63, 0.95, 'C', ha='center', va='center', fontsize=plt.rcParams["font.
 fig.text(0.01, 0.50, 'D', ha='center', va='center', fontsize=plt.rcParams["font.size"]+2, weight='bold')
 
 fig.tight_layout()
-plt.savefig("./Figures/Supplementary_Figure_3.tiff", dpi=300, bbox_inches="tight")
-plt.savefig("./Figures/Supplementary_Figure_3.png", dpi=300, bbox_inches="tight")
+plt.savefig("./Figures/Supplementary_Figure_3.tiff", dpi=600, bbox_inches="tight")
+plt.savefig("./Figures/Supplementary_Figure_3.png", dpi=600, bbox_inches="tight")
 plt.show()
 plt.close()
 # %%

@@ -18,10 +18,10 @@ cm = 1/2.54
 path = "./Arial.ttf"
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
-plt.rcParams["font.size"] = 5
+plt.rcParams["font.size"] = 6
 plot_linewidth = 0.5
 
-figsize = (7*cm, 7*cm)
+figsize = (10*cm, 10*cm)
 fig = plt.figure(figsize=figsize)
 
 pad = 11
@@ -276,8 +276,8 @@ ax4.text(-0.43, 1.0,
 ax4.spines[['right', 'top']].set_visible(False)
 
 plt.tight_layout()
-plt.savefig("./Figures/Supplementary_Figure_8.tiff", dpi=300, bbox_inches="tight")
-plt.savefig("./Figures/Supplementary_Figure_8.png", dpi=300, bbox_inches="tight")
+plt.savefig("./Figures/Supplementary_Figure_8.tiff", dpi=600, bbox_inches="tight")
+plt.savefig("./Figures/Supplementary_Figure_8.png", dpi=600, bbox_inches="tight")
 plt.show()
 plt.close()
 # %%
