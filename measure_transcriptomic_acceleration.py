@@ -67,7 +67,7 @@ dict_groups = {
 import compare_severity_infection_per_age_group as crf
 from scipy.stats import mannwhitneyu
 
-path_sev_info = "/BiO/Access/kyungwhan1998/transcriptomic_aging_paper/Clinical/infectomics_CRF_20230410_edit.xlsx"
+path_sev_info = "./Clinical/infectomics_CRF_20230410_edit.xlsx"
 path_acc_v1 = "./LASSO_INFO/standardized/healthy_illumina/corr_0.3_above_pval_0.05_below/sample_statistics_viral_v1_long.tsv"
 path_acc_v2 = "./LASSO_INFO/standardized/healthy_illumina/corr_0.3_above_pval_0.05_below/sample_statistics_viral_v2_long.tsv"
 path_acc_v3 = "./LASSO_INFO/standardized/healthy_illumina/corr_0.3_above_pval_0.05_below/sample_statistics_viral_v3_long.tsv"
@@ -106,9 +106,9 @@ cm = 1/2.54
 path = "./Arial.ttf"
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
-plt.rcParams["font.size"] = 9
-width = 16*cm
-height = 16*cm
+plt.rcParams["font.size"] = 7
+width = 13*cm
+height = 13*cm
 figsize = (width, height)
 plot_linewidth = 1
 
@@ -152,7 +152,7 @@ sns.barplot(df_merge_v1,
                ax=ax1)
 ax1.text(0.5, 140, s=f"P={round(float(pval), 5)}", ha="center", weight="bold")
 ax1.set_yscale("log")
-ax1.set_ylim(0, 310)
+ax1.set_ylim(0, 330)
 ax1.hlines(120, xmin=0, xmax=1, color="k", linewidth=0.5)
 ax1.set_xlabel("CRP Levels", fontsize=plt.rcParams["font.size"]+1)
 ax1.set_ylabel("TAA (years)", fontsize=plt.rcParams["font.size"]+1)
@@ -270,8 +270,8 @@ plt.subplots_adjust(left=0.8)
 
 # Display the plot
 plt.tight_layout()
-plt.savefig("Figures/Figure_2.png", dpi=600, bbox_inches="tight")
-plt.savefig("Figures/Figure_2.tiff", dpi=600, bbox_inches="tight")
+plt.savefig("Figures/Figure_2.png", dpi=330, bbox_inches="tight")
+plt.savefig("Figures/Figure_2.tiff", dpi=330, bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -324,8 +324,8 @@ for j in range(num_cohorts, N * N):
     axs.flatten()[j].axis('off')
 
 # Adjust layout and show plot
-plt.savefig("Figures/Supplementary_Figure_7.png", dpi=600, bbox_inches="tight")
-plt.savefig("Figures/Supplementary_Figure_7.tiff", dpi=600, bbox_inches="tight")
+plt.savefig("Figures/Supplementary_Figure_7.png", dpi=330, bbox_inches="tight")
+plt.savefig("Figures/Supplementary_Figure_7.tiff", dpi=330, bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -368,9 +368,9 @@ cm = 1/2.54
 path = "./Arial.ttf"
 prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
-plt.rcParams["font.size"] = 10
-width = 20*cm
-height = 4*cm
+plt.rcParams["font.size"] = 5
+width = 10*cm
+height = 2*cm
 figsize = (width, height)
 plot_linewidth = 1
 
@@ -426,8 +426,8 @@ for ax in axes[len(numerical_columns):]:
     ax.axis('off')
 
 plt.tight_layout()
-plt.savefig("./Figures/Supplementary_Figure_9.tiff", dpi=450, bbox_inches="tight")
-plt.savefig("./Figures/Supplementary_Figure_9.png", dpi=450, bbox_inches="tight")
+plt.savefig("./Figures/Supplementary_Figure_9.tiff", dpi=330, bbox_inches="tight")
+plt.savefig("./Figures/Supplementary_Figure_9.png", dpi=330, bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -529,8 +529,8 @@ plt.close()
 
 
 # plt.tight_layout()
-# plt.savefig("./Figures/Supplementary_Figure_11.pdf", dpi=500, bbox_inches="tight")
-# plt.savefig("./Figures/Supplementary_Figure_11.png", dpi=500, bbox_inches="tight")
+# plt.savefig("./Figures/Supplementary_Figure_11.pdf", dpi=330, bbox_inches="tight")
+# plt.savefig("./Figures/Supplementary_Figure_11.png", dpi=330, bbox_inches="tight")
 # plt.show()
 # plt.close()
 

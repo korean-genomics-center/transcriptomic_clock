@@ -30,7 +30,7 @@ prop = fm.FontProperties(fname=path)
 plt.rcParams['font.family'] = prop.get_name()
 plt.rcParams["font.size"] = 5
 width = 16*cm
-height = 10*cm
+height = 8*cm
 figsize = (width, height)
 plot_linewidth = 0.3
 
@@ -49,7 +49,7 @@ ax2 = fig.add_subplot(gs2)
 gs3 = gsfig[10:45, 110:150]
 ax3 = fig.add_subplot(gs3)
 
-gs4 = gsfig[55:90, 10:150]
+gs4 = gsfig[60:100, 10:150]
 ax4 = fig.add_subplot(gs4)
 
 # Plot in the first subplot
@@ -113,11 +113,12 @@ ax4.margins(0.01)
 fig.text(0.01, 0.95, 'A', ha='center', va='center', fontsize=plt.rcParams["font.size"]+2, weight='bold')
 fig.text(0.325, 0.95, 'B', ha='center', va='center', fontsize=plt.rcParams["font.size"]+2, weight='bold')
 fig.text(0.635, 0.95, 'C', ha='center', va='center', fontsize=plt.rcParams["font.size"]+2, weight='bold')
-fig.text(0.01, 0.45, 'D', ha='center', va='center', fontsize=plt.rcParams["font.size"]+2, weight='bold')
+fig.text(0.01, 0.40, 'D', ha='center', va='center', fontsize=plt.rcParams["font.size"]+2, weight='bold')
 
-fig.tight_layout()
-plt.savefig("./Figures/Supplementary_Figure_3.tiff", dpi=600, bbox_inches="tight")
-plt.savefig("./Figures/Supplementary_Figure_3.png", dpi=600, bbox_inches="tight")
+plt.subplots_adjust(hspace=1.0, wspace=1.0)
+plt.tight_layout()
+plt.savefig("./Figures/Supplementary_Figure_3.tiff", dpi=310, bbox_inches="tight")
+plt.savefig("./Figures/Supplementary_Figure_3.png", dpi=310, bbox_inches="tight")
 plt.show()
 plt.close()
 # %%

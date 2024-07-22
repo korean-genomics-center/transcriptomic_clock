@@ -26,12 +26,22 @@ output_dir = "/BiO/Access/kyungwhan1998/transcriptomic_clock/Figures/Cropped"
 
 image = Image.open(input_image_path)
 
+## Figure_1
+crop_areas = {
+    'A': (0, 0, image.size[0]/3-70, image.size[1]/3),   # Coordinates for part A
+    'B': (0, image.size[1]/3, image.size[0]/3-70, 2*image.size[1]/3-50),  # Coordinates for part B
+    'C': (0, 2*image.size[1]/3-50, image.size[0]/3-70, image.size[1]),  # Coordinates for part C
+    'D': (image.size[0]/3-70, 0, 2*image.size[0]/3-360, image.size[1]),  # Coordinates for part D
+    'E': (2*image.size[0]/3-360, 0, image.size[0], image.size[1]/2-150),  # Coordinates for part E
+    'F': (2*image.size[0]/3-360, image.size[1]/2-150, image.size[0], image.size[1]),  # Coordinates for part F
+}
+
 ## Figure_2
 crop_areas = {
-    'A': (0, 0, 2*image.size[0]/3, image.size[1]),   # Coordinates for part A
-    'B': (2*image.size[0]/3, 0, image.size[0], image.size[1]/3+45),  # Coordinates for part B
-    'C': (2*image.size[0]/3, image.size[1]/3+45, image.size[0], 2*image.size[1]/3),  # Coordinates for part C
-    'D': (2*image.size[0]/3, 2*image.size[1]/3, image.size[0], image.size[1]),  # Coordinates for part D
+    'A': (0, 0, 2*image.size[0]/3-50, image.size[1]),   # Coordinates for part A
+    'B': (2*image.size[0]/3-50, 0, image.size[0], image.size[1]/3+20),  # Coordinates for part B
+    'C': (2*image.size[0]/3-50, image.size[1]/3+20, image.size[0], 2*image.size[1]/3),  # Coordinates for part C
+    'D': (2*image.size[0]/3-50, 2*image.size[1]/3, image.size[0], image.size[1]),  # Coordinates for part D
 }
 
 ## Supplementary_Figure_2

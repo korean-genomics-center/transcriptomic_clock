@@ -1,6 +1,5 @@
 # %%
 import os
-
 import draw_enrichment_plot as enrich
 import matplotlib.font_manager as fm
 import matplotlib.pyplot as plt
@@ -329,8 +328,8 @@ ax8.set_axis_off()
 # ax9.add_patch(rec)
 # ax9.set_axis_off()
 
-plt.savefig("Figures/Figure_1.tiff", dpi=600, bbox_inches="tight")
-plt.savefig("Figures/Figure_1.png", dpi=600, bbox_inches="tight")
+plt.savefig("Figures/Figure_1.tiff", dpi=350, bbox_inches="tight")
+plt.savefig("Figures/Figure_1.png", dpi=350, bbox_inches="tight")
 plt.show()
 plt.close()
 
@@ -402,8 +401,8 @@ handles, labels = axs[0].get_legend_handles_labels()
 axs[-1].legend(handles, labels, loc='center', fontsize=plt.rcParams["font.size"]+1)
 
 # Adjust layout and show plot
-plt.savefig("Figures/Supplementary_Figure_6.png", dpi=600)
-plt.savefig("Figures/Supplementary_Figure_6.tiff", dpi=600)
+plt.savefig("Figures/Supplementary_Figure_6.png", dpi=350)
+plt.savefig("Figures/Supplementary_Figure_6.tiff", dpi=350)
 plt.show()
 plt.close()
 
@@ -684,8 +683,8 @@ ax4.legend(list_handles,
            frameon = True)
 ax4.set_axis_off()
 
-plt.savefig("Figures/Supplementary_Figure_2.tiff", dpi=600, bbox_inches="tight")
-plt.savefig("Figures/Supplementary_Figure_2.png", dpi=600, bbox_inches="tight")
+plt.savefig("Figures/Supplementary_Figure_2.tiff", dpi=350, bbox_inches="tight")
+plt.savefig("Figures/Supplementary_Figure_2.png", dpi=350, bbox_inches="tight")
 plt.show()
 plt.close()
 

@@ -278,8 +278,8 @@ ax4.text(-0.43, 1.0,
 ax4.spines[['right', 'top']].set_visible(False)
 
 plt.tight_layout()
-plt.savefig("./Figures/Supplementary_Figure_8.tiff", dpi=600, bbox_inches="tight")
-plt.savefig("./Figures/Supplementary_Figure_8.png", dpi=600, bbox_inches="tight")
+plt.savefig("./Figures/Supplementary_Figure_8.tiff", dpi=350, bbox_inches="tight")
+plt.savefig("./Figures/Supplementary_Figure_8.png", dpi=350, bbox_inches="tight")
 plt.show()
 plt.close()
 # %%
