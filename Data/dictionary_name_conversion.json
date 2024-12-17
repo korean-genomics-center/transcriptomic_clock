@@ -1,0 +1,13 @@
+{   
+    "healthy_cohort_train_prev_median_filter": "Healthy Training Set",
+    "healthy_cohort_train_prev_added_back_10_80_90s_median_filter": "Healthy Training Set",
+    "healthy_cohort_valid_prev": "Healthy Validation Set", 
+    "healthy_cohort2": "Healthy Test Set", 
+    "viral_v1_long": "Acute Phase",
+    "viral_v2_long": "Mid Phase",
+    "viral_v3_long": "Late Phase",
+    "viral_recov_prev": "Convalescence",
+    "anxiety_prev": "Anxiety",
+    "depression_prev": "Major Depression",
+    "suicide_attempt_prev": "Suicide Attempt"
+}

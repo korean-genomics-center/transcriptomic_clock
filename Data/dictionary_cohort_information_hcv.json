@@ -1,0 +1,4 @@
+{
+    "HCV_Resolution": ["Resolution Pre-infection (HCV)", "Resolution Acute Phase (HCV)", "Resolution Late Phase (HCV)", "Resolution Follow Up (HCV)"],
+    "HCV_Chronic": ["Chronic Pre-infection (HCV)", "Chronic Acute Phase (HCV)", "Chronic Late Phase (HCV)", "Chronic Follow Up (HCV)"]
+}

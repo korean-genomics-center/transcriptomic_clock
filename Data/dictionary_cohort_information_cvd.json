@@ -1,0 +1,5 @@
+{
+    "Healthy": ["Healthy Training Set", "Healthy Validation Set", "Healthy Test Set"],
+    "COVID-19": ["Acute Phase", "Mid Phase", "Late Phase", "Convalescence"],
+    "CVD": ["Myocardial Infarction"]
+}

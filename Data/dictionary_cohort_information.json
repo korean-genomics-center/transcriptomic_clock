@@ -1,0 +1,5 @@
+{
+    "Healthy": ["Healthy Validation Set", "Healthy Test Set"],
+    "COVID-19": ["Acute Phase", "Mid Phase", "Late Phase", "Convalescence"],
+    "Mental\nillness": ["Anxiety", "Major Depression", "Suicide Attempt"]
+}
