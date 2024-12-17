@@ -29,7 +29,9 @@
 
 # Requirements
 conda environment
-- conda env create --file environment.yaml
+'''conda env create --file environment.yaml'''
 
 R environment 
 - DESeq2
+- stringr
+- argparse
