@@ -2,22 +2,30 @@
 
 ![image](https://github.com/user-attachments/assets/1621a068-c7cb-4d9e-a898-6b73d3b16093)
 
+
 # Pre-processing
-1. filter_out_samples_by_age_group.py
-2. generate_feature_table_gene_expression_per_age.py
-3. stratify_split_train_and_test_feature_table.py
-4. (fix_10s_80s_in_train_20s_in_test.py)
-5. remove_median_zero_expression_train.py
+1. normalize_expression_data_train.R
+2. filter_out_samples_by_age_group.py
+3. generate_feature_table_gene_expression_per_age.py
+4. stratify_split_train_and_test_feature_table.py
+5. (fix_10s_80s_in_train_20s_in_test.py)
+6. remove_median_zero_expression_train.py
+7. submit_multiple_run_correlation_age.py
 
 # Training mRNA Clock
-6. submit_multiple_run_correlation_age.py
-7. standardize_testing_data.py
-8. make_transcriptomic_clock.py
+1. standardize_testing_data.py
+2. **make_transcriptomic_clock.py**
 
 # Testing mRNA Clock
-9. generate_feature_table_gene_expression_per_age.py
-10. standardize_testing_data.py
-11. KoreanBloodClock.py
+1. get_geoMeans_external_data.py
+2. normalize_external_expression_data.R
+3. generate_feature_table_gene_expression_per_age.py
+4. standardize_testing_data.py
+5. **KoreanBloodClock.py**
+
+# Testing Other Clocks
+- PetersClock.py
+- RenClock.py
 
 # Source 
 - utility.py
