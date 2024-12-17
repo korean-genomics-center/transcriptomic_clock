@@ -33,7 +33,7 @@ conda environment
 conda env create --file environment.yaml
 ```
 
-R environment 
+R packages 
 - DESeq2
 - stringr
 - argparse
