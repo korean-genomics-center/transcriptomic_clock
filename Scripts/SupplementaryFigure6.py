@@ -1,12 +1,14 @@
 # %%
-import os
 import json
+import os
+
 import matplotlib.font_manager as fm
 import matplotlib.pyplot as plt
+
 from transcriptomic_clock import Clock
 
 # %%
-WORKDIR = ".."
+WORKDIR = "/BiO/Access/kyungwhan1998/Backup/transcriptomic_clock"
 cm = 1/2.54
 path = f"{WORKDIR}/Arial.ttf"
 prop = fm.FontProperties(fname=path)
@@ -30,7 +32,7 @@ fig, axs = plt.subplots(4, 2, figsize=(width, height), constrained_layout=True)
 axs = axs.flatten()
 
 # Iterate over each test group
-for i, testname in enumerate(list_test_group[2:]):
+for i, testname in enumerate(list_test_group[4:]):
     try:
         file_testing_data = f"{dir_trained_model}/{testname}_std_scaled.txt"
         os.makedirs(dir_trained_model, exist_ok=True)
