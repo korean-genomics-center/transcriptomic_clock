@@ -12,17 +12,10 @@
 7. standardize_testing_data.py
 8. make_transcriptomic_clock.py
 
-# Testing
+# Testing mRNA Clock
 1. generate_feature_table_gene_expression_per_age.py
 2. standardize_testing_data.py
-3.
-
-## KoreanBloodClock
-- KoreanBloodClock.py
-## PetersClock
-- PetersClock.py
-## RenClock
-- RenClock.py
+3. KoreanBloodClock.py
 
 # Source 
 - utility.py
@@ -31,8 +24,3 @@
 - draw_enrichment_plot.py
 - compare_clinical_values.py
 - missing.py
-
-  
-
-  
-
