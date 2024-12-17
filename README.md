@@ -1,8 +1,5 @@
 # Korean Blood Transcriptomic Clock
 
-<<<<<<< HEAD
-Hello
-=======
 ## check_qc_samples.py
 
 ## compare_age_expression_correlation_train_test.py
@@ -32,4 +29,3 @@ Hello
 ### run_transcriptomic_clock.py
 
 ### measure_transcriptomic_acceleration.py
->>>>>>> 6404d95 (Readme File)
