@@ -23,7 +23,7 @@
 4. standardize_testing_data.py
 5. **KoreanBloodClock.py**
 
-# Testing Other Clocks
+# Testing Other mRNA Clocks
 - PetersClock.py
 - RenClock.py
 
