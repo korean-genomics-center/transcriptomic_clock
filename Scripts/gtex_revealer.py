@@ -1,5 +1,6 @@
 # %%
 import os
+
 import matplotlib.font_manager as fm
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
@@ -56,8 +57,8 @@ real_age_reshape = np.array(real_age).reshape(-1, 1)
 observed_transcriptomic_age = clock.get_predicted_y()
 df_merged["RNAage"] = observed_transcriptomic_age
 df_merged["TAA"] = df_merged["RNAage"] - df_merged["Sample_Age"]
-hardy = 0
-df_merged = df_merged[~df_merged["DTHHRDY"].isin([hardy])]
+hardy = 1
+df_merged = df_merged[df_merged["DTHHRDY"].isin([hardy])]
 corr, pval = spearmanr(df_merged["Sample_Age"], df_merged["RNAage"])
 mae = np.mean(abs(df_merged["RNAage"] - df_merged["Sample_Age"]))
 sns.scatterplot(data=df_merged, x="Sample_Age", y="RNAage", color="white", edgecolor="k", linewidth=1, s=20, alpha=0.7, zorder=2)
@@ -68,7 +69,7 @@ ax1.set_ylabel("Predicted Age (years)", fontsize=plt.rcParams["font.size"]+2)
 ax1.set_xlabel("Chronological Age (years)", fontsize=plt.rcParams["font.size"]+2)
 title = f"{dict_name_conversion[list(dict_name_conversion.keys())[0]]}, r={round(corr, 2)}, mae={round(mae, 2)}"
 ax1.set_title(title, fontsize=plt.rcParams["font.size"]+1, weight="bold", pad=1.0)
-ax1.set_xlim(0, 81)
+ax1.set_xlim(0, 91)
 ax1.set_ylim(0, )
 ax1.grid(axis="both")
 ax1.legend().set_visible(False)

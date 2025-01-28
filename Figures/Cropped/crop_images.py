@@ -82,7 +82,7 @@ crop_areas = {
     'C': (image.size[1]+20, 0, image.size[0], image.size[0]/3-90),  # Coordinates for part C
     'D': (0, image.size[0]/3-90, image.size[0], image.size[0]),  # Coordinates for part D
 }
-
+# each value is a tuple (left, upper, right, lower)
 crop_image(input_image_path, figure, output_dir, crop_areas)
 
 # %%
@@ -103,7 +103,7 @@ crop_areas = {
     'H': (image.size[0]/3, 2*image.size[1]/3, 2*image.size[0]/3, image.size[1]),  # Coordinates for part H
     'I': (2*image.size[0]/3, 2*image.size[1]/3, image.size[0], image.size[1])  # Coordinates for part I
 }
-
+# each value is a tuple (left, upper, right, lower)
 crop_image(input_image_path, figure, output_dir, crop_areas)
 #%%
 # Define the input image path and output directory
@@ -113,15 +113,10 @@ output_dir = "/BiO/Access/kyungwhan1998/Backup/transcriptomic_clock/Figures/Crop
 image = Image.open(input_image_path)
 ## Supplementary_Figure_4
 crop_areas = {
-    'A': (0, 0, image.size[0]/2, image.size[1]/4+5),   # Coordinates for part A
-    'B': (image.size[0]/2, 0, image.size[0], image.size[1]/4+5),  # Coordinates for part B
-    'C': (0, image.size[1]/4+5, image.size[0]/2, image.size[1]/2+5),  # Coordinates for part C
-    'D': (image.size[0]/2, image.size[1]/4+5, image.size[0], image.size[1]/2+5),  # Coordinates for part D
-    'E': (0, image.size[1]/2-5, image.size[0]/2, 3*image.size[1]/4-5),  # Coordinates for part E
-    'F': (image.size[0]/2, image.size[1]/2-5, image.size[0], 3*image.size[1]/4-5),  # Coordinates for part F
-    'G': (0, 3*image.size[1]/4-5, image.size[0]/2, image.size[1]-5),  # Coordinates for part G
+    'A': (0, 0, image.size[0]/2, image.size[1]),   # Coordinates for part A
+    'B': (image.size[0]/2, 0, image.size[0], image.size[1]),  # Coordinates for part B
 }
-
+# each value is a tuple (left, upper, right, lower)
 crop_image(input_image_path, figure, output_dir, crop_areas)
 
 # %%
@@ -190,3 +185,18 @@ crop_areas = {
     'B': (0, image.size[1]/2, image.size[0], image.size[1]),  # Coordinates for part B
 }
 crop_image(input_image_path, figure, output_dir, crop_areas)
+
+# %%
+# Define the input image path and output directory
+figure = "Supplementary_Figure_11"
+input_image_path = f"/BiO/Access/kyungwhan1998/Backup/transcriptomic_clock/Figures/{figure}.png"
+output_dir = "/BiO/Access/kyungwhan1998/Backup/transcriptomic_clock/Figures/Cropped"
+image = Image.open(input_image_path)
+## Supplementary_Figure_8
+crop_areas = {
+    'A': (0, 0, image.size[0]/2, image.size[1]),   # Coordinates for part A
+    'B': (image.size[0]/2, 0, image.size[0], image.size[1]),  # Coordinates for part B
+}
+crop_image(input_image_path, figure, output_dir, crop_areas)
+
+# each value is a tuple (left, upper, right, lower)
