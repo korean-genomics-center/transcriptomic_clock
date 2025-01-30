@@ -34,7 +34,7 @@ os.makedirs(dir_trained_model, exist_ok=True)
 clock = Clock(dir_trained_model, file_testing_data, col_sampleid="Project-ID", col_y="Sample_Age")
 clock.make_dataframe_error_statistics_per_sample()
 df_testing_dataset = clock.get_testing_dataset()
-df_metadata = pd.read_csv("/BiO/Research/GeroExpressome/Resources/Data/GTEx/GTEx_Analysis_v8_Annotations_Metadata_Whole_Blood.txt", sep="\t")
+df_metadata = pd.read_csv(f"{GTEx_location}", sep="\t")
 df_metadata_select = df_metadata[["RACE", "DTHHRDY", "SMRIN", "Sample_Trait"]]
 df_metadata_select["RNAQuality"] = df_metadata_select["SMRIN"].apply(lambda x: float())
 df_merged = pd.concat([df_testing_dataset, df_metadata_select], axis=1)
