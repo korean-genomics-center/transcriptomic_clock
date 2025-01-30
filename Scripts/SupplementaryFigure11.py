@@ -13,6 +13,7 @@ from transcriptomic_clock import Clock
 # %%
 dict_name_conversion = {"GTEx": "GTEx (Whole Blood)"}
 WORKDIR = ".."
+GTEx_location = ""
 cm = 1/2.54
 path = f"{WORKDIR}/Arial.ttf"
 prop = fm.FontProperties(fname=path)
