@@ -27,7 +27,7 @@ tick_spacing = 10
 fig = plt.figure(figsize=(width, height))
 gsfig = gridspec.GridSpec(2, 2, left=0.1, right=0.9, bottom=0.1, top=0.9, wspace=0.4, hspace=0.2)
 
-WORKDIR = "/BiO/Research/GeroExpressome/Workspace/RNAClock/Revision_final_trained_with_only_korean"
+WORKDIR = "../"
 dir_trained_model = f"{WORKDIR}/LASSO_INFO/healthy_cohort_train_prev_median_filter/corr_0.35_above_pval_0.05_below"
 file_testing_data = f"{dir_trained_model}/{list(dict_name_conversion.keys())[0]}_std_scaled.txt"
 os.makedirs(dir_trained_model, exist_ok=True)
